@@ -62,13 +62,20 @@
         margin-bottom: 30px;
       }
       .jumbotron {
-        background-image: url(./imagens/Arte\ 1.jpg);
+        background-image: url("./imagens/Arte\ 1.jpg");
         color: #cb104e;
-        padding: 100px 50px;
+        padding: 80px 50px;
         font-family: Montserrat, sans-serif;
-        height: 100%;
+        min-height: 400px;
         width: 100%;
         background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      @media (min-width: 992px) {
+        .jumbotron {
+          background-size: cover;
+        }
       }
       .jumbotron h1 {
         font-family: "Bebas Neue Bold";
@@ -275,11 +282,63 @@
         font-family: "Acumin Pro Medium";
       }
 
-      #ocean-ride h1{
+      #ocean-ride h1 {
         font-family: "Bebas Neue Bold";
         text-align: center;
       }
+      #ocean-ride img {
+        height: 100%;
+        width: 100%;
+      }
+      #about-ocean-ride h1 {
+        font-family: "Bebas Neue Bold";
+        text-align: center;
+      }
+      #about-ocean-ride p {
+        font-family: "Acumin Pro Regular";
+        text-align: justify;
+        font-size: 18px;
+      }
 
+      #rotas-maritimas img {
+        height: 100%;
+        width: 100%;
+      }
+      #rotas-maritimas p {
+        font-family: "Acumin Pro Regular";
+        text-align: justify;
+        font-size: 18px;
+      }
+      #threerdsolution h1 {
+        font-family: "Bebas Neue Bold";
+        text-align: center;
+      }
+      #threerdsolution p {
+        font-family: "Acumin Pro Regular";
+        text-align: justify;
+        font-size: 18px;
+      }
+      #threerdsolution img {
+        height: 70%;
+        width: 70%;
+        margin-left: 15%;
+      }
+      .youtube {
+        background-image: url("./imagens/youtube.svg");
+        background-repeat: no-repeat;
+        display: block;
+        width: 60px;
+        height: 60px;
+        text-indent: -5000px;
+      }
+      .instagram {
+        background-image: url("./imagens/instagram.svg");
+        background-repeat: no-repeat;
+        display: block;
+        width: 60px;
+        height: 60px;
+        text-indent: -5000px;
+      }
       #about img {
         width: 100%;
         height: 100%;
@@ -293,6 +352,22 @@
         text-align: justify;
         font-family: "Acumin Pro Bold";
         font-size: 18px;
+      }
+      #contact img {
+        height: 50%;
+        width: 50%;
+        margin-left: 40%;
+      }
+      h1.logo {
+        background-image: url("./imagens/logo_cafeina.svg");
+        background-repeat: no-repeat;
+        display: block;
+        height: 70px;
+        width: 50px;
+        text-indent: -5000px;
+        margin: 0;
+        padding: 0;
+        margin-top: -10px;
       }
     </style>
   </head>
@@ -310,15 +385,19 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#myPage">CAFEINA TEAM</a>
+          <a class="navbar-brand" href="#myPage"
+            ><h1 class="logo">Cafeína</h1></a
+          >
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#about">+ SOBRE NÓS</a></li>
-            <li><a href="#services">SERVICOS</a></li>
-            <li><a href="#portfolio">PORTFOLIO</a></li>
-            <!--<li><a href="#pricing">PREÇOS</a></li>-->
             <li><a href="#impact">IMPACT</a></li>
+            <li><a href="#team">TEAM</a></li>
+            <li><a href="#ocean-ride">OCEAN RIDE</a></li>
+            <li><a href="#about">+ ABOUT US</a></li>
+            <!--<li><a href="#services">SERVICOS</a></li>
+            <li><a href="#portfolio">PORTFOLIO</a></li>
+            <li><a href="#pricing">PREÇOS</a></li>-->
             <li><a href="#contact">CONTACT</a></li>
           </ul>
         </div>
@@ -331,15 +410,15 @@
         Winner of the "Best Use of Hardware" category at the Space Apps
         Challenge Salvador
       </p>
-      <form>
-        <!--<div class="input-group">
+   <!--<form>
+        <div class="input-group">
       <input type="email" class="form-control" size="50" placeholder="Email Address" required>
       <div class="input-group-btn">
         <button type="button" class="btn btn-danger">Subscreva</button>
       </div>
     </div>
+  </form>
   -->
-      </form>
     </div>
     <!--Impact Section-->
     <div id="impact" class="container-fluid">
@@ -374,15 +453,89 @@
       <p>Our team is composed by</p>
       <img src="imagens/tripulacao.jpg" alt="Team Cafeinne" />
     </div>
-<hr>
+    <hr />
+    <!--Ocean Ride-->
     <div id="ocean-ride" class="container-fluid">
-      <h1>OUR TRANSFORMING
-        CREATION: OCEAN RIDE
-        </h1>
-        <div class="col-sm-6">
-          <img src="imagens/ocean_ride_vista_frontal.png" alt="">
-        </div>
-        <div class="col-sm-6"></div>
+      <h1>OUR TRANSFORMING CREATION: OCEAN RIDE</h1>
+      <br />
+      <div class="col-sm-6">
+        <img src="imagens/ocean_ride_vista_frontal.png" alt="Ocean ride" />
+        <h3>Ocean Ride Model 1</h3>
+        <h6>Perspective view of Ocean Ride</h6>
+      </div>
+      <div class="col-sm-6">
+        <img src="imagens/ocean-ride-vista-lateral.png" alt="Microplastics" />
+        <h3>Ocean Ride Model 2</h3>
+        <h6>Side view of Ocean Ride</h6>
+      </div>
+    </div>
+
+    <!--About Ocean Ride-->
+    <div id="about-ocean-ride" class="container-fluid">
+      <h1>1ST: WHAT IS THE <b>OCEAN RIDE?</b></h1>
+      <p>
+        Ocean Ride is a microplastic collection system that works differently
+        than others. In this project we have two main products: first use as a
+        dockable object on any boat and in addition be a fixed platform
+        strategically positioned in the areas of sea currents that is where has
+        the largest flow of these materials. The system will use the Van Der
+        Graff generator principle to attract micro plastic through an
+        electrostatic current and store this debris inside a container.
+      </p>
+      <br />
+      <h1>2ND: <b>APPLICABILITY</b> AND FEASIBILITY:</h1>
+      <p>
+        FACILITY: First we will use thousands of existing vessels that make
+        trips around the entire maritime territory, docking our collection
+        system to take advantage of the sea routes and use them to our advantage
+        and helping to clean up the ocean. Moreover, on fixed platforms we will
+        take advantage of the sea currents that converge to a strategic place
+        that throws the waste towards the positioning of our platform.
+      </p>
+    </div>
+
+    <!--Maritims Routes-->
+    <div id="rotas-maritimas" class="container-fluid">
+      <div class="col-sm-6">
+        <img src="imagens/rotas_maritimas.png" alt="Maritims Routes" />
+      </div>
+      <div class="col-sm-6">
+        <p>
+          ECONOMIC FEASIBILITY: The economic viability will make companies
+          embrace our solution, while enabling sustainability and cleanliness of
+          the ocean, will provide additional profit for ship companies. In
+          addition, NASA will have a low cost to implement. <br />
+          COMPANY IMAGE: The company will be associated with a sustainable
+          image, and consequently will generate a competitive differential that
+          will help in the formation of new business, besides being able to
+          achieve a stronger partnership with the clients interested in this
+          image.
+        </p>
+      </div>
+    </div>
+    <div id="threerdsolution" class="container-fluid">
+      <h1>3rd Solution</h1>
+      <p>
+        Van Der Graff's generator principle is the heart of the project, and it
+        is responsible for all the attraction of microplastics across a specific
+        field to attract only that plastic. The device works similar to a
+        magnet. In addition, there is a conveyor belt that, when it comes into
+        contact with the Van Der Graff generator orb, will be electrified and
+        attract our debris, but in order not only to guarantee the electrostatic
+        charge on the conveyor belts, a blade mechanism with a maximum hole size
+        of 5mm. will be inserted into the treadmill.
+        <br /><br />
+        Right after the process of attracting the microplastic, we will store
+        this waste, compacting it to optimize as much space as possible
+      </p>
+      <img
+        src="imagens/ocean_ride_vistas_tecnica_Prancheta 1.png"
+        alt="Ocean Device"
+      />
+      <img
+        src="imagens/ocean_ride_vistas_tecnica-02.png"
+        alt="Ocean Device sustainable"
+      />
     </div>
     <!-- Container (About Section) -->
     <div id="about" class="container-fluid">
@@ -429,7 +582,7 @@
       </div>
     </div>
 
-    <div class="container-fluid bg-grey">
+    <!--<div class="container-fluid bg-grey">
       <div class="row">
         <div class="col-sm-4">
           <span class="glyphicon glyphicon-globe logo slideanim"></span>
@@ -459,7 +612,7 @@
       </div>
     </div>
 
-    <!-- Container (Services Section) -->
+    Container (Services Section)
     <div id="services" class="container-fluid text-center">
       <h2>SERVICES</h2>
       <h4>What we offer</h4>
@@ -501,7 +654,7 @@
       </div>
     </div>
 
-    <!-- Container (Portfolio Section) -->
+     Container (Portfolio Section) 
     <div id="portfolio" class="container-fluid text-center bg-grey">
       <h2>Portfolio</h2>
       <br />
@@ -542,14 +695,14 @@
         class="carousel slide text-center"
         data-ride="carousel"
       >
-        <!-- Indicators -->
+         Indicators 
         <ol class="carousel-indicators">
           <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
           <li data-target="#myCarousel" data-slide-to="1"></li>
           <li data-target="#myCarousel" data-slide-to="2"></li>
         </ol>
 
-        <!-- Wrapper for slides -->
+         Wrapper for slides 
         <div class="carousel-inner" role="listbox">
           <div class="item active">
             <h4>
@@ -572,7 +725,7 @@
           </div>
         </div>
 
-        <!-- Left and right controls -->
+       Left and right controls 
         <a
           class="left carousel-control"
           href="#myCarousel"
@@ -598,7 +751,7 @@
           <span class="sr-only">Next</span>
         </a>
       </div>
-    </div>
+    </div>-->
 
     <!-- Container (Pricing Section) -->
     <!--div id="pricing" class="container-fluid">
@@ -671,18 +824,39 @@
     <div id="contact" class="container-fluid bg-grey">
       <h2 class="text-center">CONTACT</h2>
       <div class="row">
-        <div class="col-sm-5">
+        <div class="col-sm-4">
           <p>Contact us and we'll get back to you within 24 hours.</p>
           <p>
-            <span class="glyphicon glyphicon-map-marker"></span> Chicago, US
+            <span class="glyphicon glyphicon-map-marker"></span> Bahia, Brazil
           </p>
-          <p><span class="glyphicon glyphicon-phone"></span> +00 1515151515</p>
+          <p><span class="glyphicon glyphicon-phone"></span> +55 71992530964</p>
           <p>
             <span class="glyphicon glyphicon-envelope"></span>
-            myemail@something.com
+            contatoequipecafeina@gmail.com
           </p>
         </div>
-        <div class="col-sm-7 slideanim">
+        <div class="col-sm-4">
+          <p align="center">
+            <a
+              href="https://www.youtube.com/channel/UCk_6PDwjNjabjhXO3Cin3dw"
+              target="_blank"
+              class="youtube"
+              >Youtube</a
+            >
+          </p>
+          <p align="center">
+            <a
+              href="https://www.instagram.com/equipecafeina/"
+              target="_blank"
+              class="instagram"
+              >Instagram</a
+            >
+          </p>
+        </div>
+        <div class="col-sm-4">
+          <img src="imagens/logo_cafeina_cinza.svg" alt="" />
+        </div>
+        <!--<div class="col-sm-7 slideanim">
           <div class="row">
             <div class="col-sm-6 form-group">
               <input
@@ -720,7 +894,7 @@
               </button>
             </div>
           </div>
-        </div>
+        </div>-->
       </div>
     </div>
 
